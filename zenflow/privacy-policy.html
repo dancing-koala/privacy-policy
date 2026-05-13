@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — ZenFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --muted: #6b7280;
+        --accent: #4a7c6f;
+        --accent-light: #e8f2f0;
+        --border: #e5e7eb;
+        --bg: #fafaf8;
+        --white: #ffffff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+
+
+      /* Header */
+      header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 28px 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-family: 'DM Serif Display', serif;
+        font-size: 22px;
+        color: var(--accent);
+        letter-spacing: -0.3px;
+      }
+
+      .logo span {
+        font-style: italic;
+        color: var(--ink);
+      }
+
+      .updated {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 400;
+      }
+
+
+
+      /* Hero */
+      .hero {
+        background: var(--white);
+        padding: 72px 32px 56px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero h1 {
+        font-family: 'DM Serif Display', serif;
+        font-size: clamp(36px, 5vw, 52px);
+        line-height: 1.1;
+        letter-spacing: -1px;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+
+      .hero h1 em {
+        font-style: italic;
+        color: var(--accent);
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 480px;
+        margin: 0 auto;
+        font-size: 15px;
+      }
+
+
+
+      /* TOC */
+      .toc-wrap {
+        max-width: 760px;
+        margin: 48px auto 0;
+        padding: 0 32px;
+      }
+
+      .toc {
+        background: var(--accent-light);
+        border-radius: 12px;
+        padding: 28px 32px;
+      }
+
+      .toc h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+
+      .toc ol {
+        list-style: decimal;
+        padding-left: 20px;
+        columns: 2;
+        column-gap: 32px;
+      }
+
+      .toc ol li {
+        margin-bottom: 6px;
+        font-size: 14px;
+        break-inside: avoid;
+      }
+
+      .toc ol li a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 400;
+      }
+
+      .toc ol li a:hover {
+        color: var(--accent);
+      }
+
+
+
+      /* Main content */
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 32px 96px;
+      }
+
+      section {
+        margin-bottom: 56px;
+        padding-bottom: 56px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .section-number {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-family: 'DM Serif Display', serif;
+        font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+        color: var(--ink);
+      }
+
+      p {
+        margin-bottom: 16px;
+        color: #374151;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      ul, ol {
+        padding-left: 20px;
+        margin-bottom: 16px;
+        color: #374151;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+
+
+      /* Highlight box */
+      .highlight {
+        background: var(--accent-light);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+        margin: 20px 0;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+
+
+      /* Data table */
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 14px;
+      }
+
+      .data-table th {
+        background: var(--ink);
+        color: var(--white);
+        padding: 10px 16px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        color: #374151;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+      .data-table tr:nth-child(even) td {
+        background: #f9fafb;
+      }
+
+
+
+      /* Contact */
+      .contact-box {
+        background: var(--ink);
+        color: var(--white);
+        border-radius: 12px;
+        padding: 32px;
+        margin-top: 20px;
+      }
+
+      .contact-box p {
+        color: #d1d5db;
+        margin-bottom: 12px;
+      }
+      .contact-box a {
+        color: #6ee7b7;
+        text-decoration: none;
+      }
+      .contact-box a:hover {
+        text-decoration: underline;
+      }
+
+
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 32px;
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+        background: var(--white);
+      }
+
+      @media (max-width: 600px) {
+        .toc ol {
+          columns: 1;
+        }
+        .header-inner {
+          flex-direction: column;
+          gap: 4px;
+          text-align: center;
+        }
+        h2 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">Zen<span>Flow</span></div>
+        <div class="updated">Last updated: May 13, 2026</div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <h1>Privacy <em>Policy</em></h1>
+      <p>How we collect, use, and protect your information when you use ZenFlow.</p>
+    </div>
+
+    <div class="toc-wrap">
+      <div class="toc">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#s1">Who We Are</a></li>
+          <li><a href="#s2">Data We Collect</a></li>
+          <li><a href="#s3">How We Use Your Data</a></li>
+          <li><a href="#s4">Payments & Subscriptions</a></li>
+          <li><a href="#s5">Data Sharing</a></li>
+          <li><a href="#s6">Data Retention</a></li>
+          <li><a href="#s7">Your Rights</a></li>
+          <li><a href="#s8">Children's Privacy</a></li>
+          <li><a href="#s9">Security</a></li>
+          <li><a href="#s10">Changes to This Policy</a></li>
+          <li><a href="#s11">Contact Us</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <main>
+
+      <section id="s1">
+        <div class="section-number">01</div>
+        <h2>Who We Are</h2>
+        <p>ZenFlow ("we", "our", or "us") is a guided breathing application available on Android. This Privacy Policy explains how we handle personal data when you download, install, or use the ZenFlow app.</p>
+        <p>By using ZenFlow, you agree to the practices described in this policy. If you do not agree, please discontinue use of the application.</p>
+      </section>
+
+      <section id="s2">
+        <div class="section-number">02</div>
+        <h2>Data We Collect</h2>
+        <p>We follow a minimal data collection principle. We only collect what is strictly necessary to provide the service.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Data</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Account</strong></td>
+              <td>Email address (if you create an account)</td>
+              <td>Authentication, account recovery</td>
+            </tr>
+            <tr>
+              <td><strong>Usage</strong></td>
+              <td>Exercises completed, session duration, streak data</td>
+              <td>Progress tracking, personalization</td>
+            </tr>
+            <tr>
+              <td><strong>Device</strong></td>
+              <td>OS version, device model, app version</td>
+              <td>Bug diagnosis, compatibility</td>
+            </tr>
+            <tr>
+              <td><strong>Crash logs</strong></td>
+              <td>Stack traces, error context (anonymized)</td>
+              <td>App stability</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight">
+          We do <strong>not</strong> collect health data, microphone recordings, location, or contacts. Breathing exercises are processed entirely on-device.
+        </div>
+      </section>
+
+      <section id="s3">
+        <div class="section-number">03</div>
+        <h2>How We Use Your Data</h2>
+        <p>We use collected data exclusively for the following purposes:</p>
+        <ul>
+          <li>Providing and improving the ZenFlow application</li>
+          <li>Saving your progress and preferences across sessions</li>
+          <li>Diagnosing and fixing technical issues</li>
+          <li>Sending transactional emails (account confirmation, subscription receipts) — never marketing without explicit consent</li>
+        </ul>
+        <p>We do not build advertising profiles, sell data, or use your information for any purpose not listed above.</p>
+      </section>
+
+      <section id="s4">
+        <div class="section-number">04</div>
+        <h2>Payments &amp; Subscriptions</h2>
+        <p>ZenFlow offers optional in-app purchases and subscriptions processed exclusively through the <strong>Google Play Billing</strong> system.</p>
+
+        <div class="highlight">
+          We never see, store, or process your payment card details. All financial transactions are handled directly by Google. Please refer to <a href="https://policies.google.com/privacy" target="_blank" style="   color: var(--accent);">Google's Privacy Policy</a> for information on how payment data is handled.
+        </div>
+
+        <p>Regarding subscriptions:</p>
+        <ul>
+          <li>Subscriptions <strong>auto-renew</strong> at the end of each billing period unless cancelled at least 24 hours before the renewal date.</li>
+          <li>You can manage or cancel your subscription at any time via <strong>Google Play → Subscriptions</strong>.</li>
+          <li>Cancellation takes effect at the end of the current paid period. No partial refunds are issued except where required by applicable law.</li>
+          <li>Prices may change; you will be notified in advance of any price increases.</li>
+        </ul>
+
+        <p>For refund requests, please contact Google Play support directly, as all billing is managed by Google.</p>
+      </section>
+
+      <section id="s5">
+        <div class="section-number">05</div>
+        <h2>Data Sharing</h2>
+        <p>We do not sell, rent, or trade your personal data. We may share limited data with the following categories of third parties, strictly for operational purposes:</p>
+        <ul>
+          <li><strong>Crash reporting</strong> (e.g. Firebase Crashlytics): anonymized error logs only</li>
+          <li><strong>Analytics</strong> (if applicable): aggregated, non-identifiable usage statistics</li>
+          <li><strong>Legal obligation</strong>: if required by law or valid legal process</li>
+        </ul>
+        <p>Any third-party service we use is bound by data processing agreements that prohibit them from using your data for their own purposes.</p>
+      </section>
+
+      <section id="s6">
+        <div class="section-number">06</div>
+        <h2>Data Retention</h2>
+        <p>We retain your data for as long as your account is active. If you delete your account:</p>
+        <ul>
+          <li>Your personal data is deleted within <strong>30 days</strong>.</li>
+          <li>Anonymized, aggregated data (not linked to you) may be retained for analytical purposes.</li>
+          <li>Backup copies are purged within <strong>90 days</strong>.</li>
+        </ul>
+        <p>You can request account deletion at any time from within the app or by contacting us.</p>
+      </section>
+
+      <section id="s7">
+        <div class="section-number">07</div>
+        <h2>Your Rights</h2>
+        <p>Depending on your jurisdiction, you have the following rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Access</strong>: request a copy of the data we hold about you</li>
+          <li><strong>Rectification</strong>: correct inaccurate or incomplete data</li>
+          <li><strong>Erasure</strong>: request deletion of your data ("right to be forgotten")</li>
+          <li><strong>Portability</strong>: receive your data in a machine-readable format</li>
+          <li><strong>Objection</strong>: object to certain types of processing</li>
+          <li><strong>Withdraw consent</strong>: at any time, where processing is based on consent</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at the address below. We will respond within 30 days.</p>
+        <p>If you are located in the EU/EEA and believe we are processing your data unlawfully, you have the right to lodge a complaint with your local data protection authority.</p>
+      </section>
+
+      <section id="s8">
+        <div class="section-number">08</div>
+        <h2>Children's Privacy</h2>
+        <p>ZenFlow is not directed at children under the age of 13. We do not knowingly collect personal data from children under 13. If we become aware that a child under 13 has provided personal data, we will delete it promptly.</p>
+        <p>If you believe we have inadvertently collected data from a child, please contact us immediately.</p>
+      </section>
+
+      <section id="s9">
+        <div class="section-number">09</div>
+        <h2>Security</h2>
+        <p>We implement industry-standard technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction. These include:</p>
+        <ul>
+          <li>Encryption in transit (TLS) and at rest</li>
+          <li>Access controls limiting who can access personal data internally</li>
+          <li>Regular security reviews of our infrastructure</li>
+        </ul>
+        <p>No method of transmission over the internet is 100% secure. We cannot guarantee absolute security, but we take all reasonable precautions.</p>
+      </section>
+
+      <section id="s10">
+        <div class="section-number">10</div>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page and, for significant changes, notify you via the app or email.</p>
+        <p>Continued use of ZenFlow after changes take effect constitutes acceptance of the updated policy.</p>
+      </section>
+
+      <section id="s11">
+        <div class="section-number">11</div>
+        <h2>Contact Us</h2>
+        <p>For any privacy-related questions, requests, or concerns:</p>
+        <div class="contact-box">
+          <p><strong style=" color: white;">ZenFlow</strong></p>
+          <p>Email: <a href="mailto:zenflow-mobile@proton.me">zenflow-mobile@proton.me</a></p>
+          <p>For account deletion requests, you can also use the in-app option under <strong style="   color: white;">Settings → Account → Delete Account</strong>.</p>
+          <p style="   margin-bottom:0; font-size: 13px;">We aim to respond to all privacy requests within 30 days.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 ZenFlow. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
