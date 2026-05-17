@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Breathe.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --lavender: #9b8ec4;
+        --lavender-light: #e8e4f3;
+        --lavender-mid: #c4b9e0;
+        --lavender-deep: #5c4e8a;
+        --ink: #1e1a2e;
+        --ink-soft: #4a4460;
+        --white: #fdfcff;
+        --mist: #f3f1f9;
+        --border: #dcd6f0;
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 300;
+        background-color: var(--white);
+        color: var(--ink);
+        line-height: 1.75;
+      }
+
+
+
+      /* ─── Header ─── */
+      header {
+        background: linear-gradient(160deg, var(--lavender-deep) 0%, var(--lavender) 60%, var(--lavender-mid) 100%);
+        padding: 72px 40px 56px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 60% 50% at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 70%),
+          radial-gradient(ellipse 40% 60% at 80% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      header .app-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+        font-style: italic;
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.95);
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
+      }
+
+      header h1 {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 24px;
+      }
+
+      header .last-updated {
+        display: inline-block;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.06em;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 5px 14px;
+        border-radius: 20px;
+      }
+
+
+
+      /* ─── Layout ─── */
+      .container {
+        max-width: 740px;
+        margin: 0 auto;
+        padding: 64px 32px 96px;
+      }
+
+
+
+      /* ─── Intro ─── */
+      .intro {
+        background: var(--mist);
+        border-left: 3px solid var(--lavender);
+        padding: 24px 28px;
+        border-radius: 0 8px 8px 0;
+        margin-bottom: 56px;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+      }
+
+
+
+      /* ─── Sections ─── */
+      section {
+        margin-bottom: 48px;
+      }
+
+      section + section {
+        padding-top: 48px;
+        border-top: 1px solid var(--border);
+      }
+
+      h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        font-size: 1.65rem;
+        color: var(--lavender-deep);
+        margin-bottom: 16px;
+        letter-spacing: 0.01em;
+      }
+
+      h2 .section-num {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--lavender);
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        margin-bottom: 14px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style: none;
+        margin: 12px 0 14px;
+        padding: 0;
+      }
+
+      ul li {
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        padding: 6px 0 6px 20px;
+        position: relative;
+      }
+
+      ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--lavender);
+        opacity: 0.7;
+      }
+
+
+
+      /* ─── Highlight box ─── */
+      .highlight {
+        background: var(--lavender-light);
+        border-radius: 8px;
+        padding: 20px 24px;
+        margin: 18px 0;
+      }
+
+      .highlight p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--lavender-deep);
+        font-weight: 400;
+      }
+
+
+
+      /* ─── Contact block ─── */
+      .contact-block {
+        background: var(--ink);
+        border-radius: 12px;
+        padding: 32px 36px;
+        color: var(--lavender-light);
+      }
+
+      .contact-block h2 {
+        color: var(--lavender-mid);
+      }
+
+      .contact-block p,
+      .contact-block a {
+        color: rgba(232, 228, 243, 0.75);
+        font-size: 0.92rem;
+      }
+
+      .contact-block a {
+        color: var(--lavender-mid);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(196, 185, 224, 0.35);
+        transition: border-color 0.2s;
+      }
+
+      .contact-block a:hover {
+        border-color: var(--lavender-mid);
+      }
+
+      .contact-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-top: 16px;
+      }
+
+      .contact-detail span {
+        font-size: 0.85rem;
+        color: rgba(232, 228, 243, 0.5);
+        letter-spacing: 0.05em;
+      }
+
+
+
+      /* ─── Footer ─── */
+      footer {
+        text-align: center;
+        padding: 28px 24px;
+        background: var(--mist);
+        border-top: 1px solid var(--border);
+        font-size: 0.8rem;
+        color: var(--lavender);
+        letter-spacing: 0.06em;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 52px 24px 40px;
+        }
+        header .app-name {
+          font-size: 2.2rem;
+        }
+        .container {
+          padding: 48px 20px 72px;
+        }
+        .contact-block {
+          padding: 24px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <p class="app-name">Breathe.</p>
+      <h1>Privacy Policy</h1>
+      <span class="last-updated">Last updated: May 17, 2026</span>
+    </header>
+
+    <div class="container">
+
+      <div class="intro">
+        This Privacy Policy explains how the <strong>Breathe.</strong> application (package ID: <code>com.cobr.optimhale</code>),
+        developed by Corentin Bruneau, handles your information. We take your privacy seriously —
+        and in this case, that means keeping things very simple.
+      </div>
+
+      <!-- 1 -->
+      <section>
+        <h2>
+          <span class="section-num">01</span>
+          Information We Collect
+        </h2>
+        <p>
+          Breathe. does not collect, store, or transmit any personal data.
+          The application runs entirely on your device. No account creation is required,
+          and no data is sent to external servers.
+        </p>
+        <div class="highlight">
+          <p>All breathing session data, progress, and preferences remain on your device at all times.</p>
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section>
+        <h2>
+          <span class="section-num">02</span>
+          Data Shared With Third Parties
+        </h2>
+        <p>
+          We do not share any data with third parties. Breathe. does not integrate
+          advertising networks, analytics services, or any external data processors.
+        </p>
+        <p>
+          As declared on the Google Play Store, no data is shared with third parties.
+        </p>
+      </section>
+
+      <!-- 3 -->
+      <section>
+        <h2>
+          <span class="section-num">03</span>
+          Permissions
+        </h2>
+        <p>
+          Breathe. may request access to the following device capabilities:
+        </p>
+        <ul>
+          <li><strong>Vibration</strong> — used for haptic cues that guide your breathing rhythm. No data is collected through this feature.</li>
+          <li><strong>Keep screen on</strong> — to prevent the screen from turning off during a session. No data is collected through this feature.</li>
+        </ul>
+        <p>
+          No permission is used to collect, track, or transmit information about you.
+        </p>
+      </section>
+
+      <!-- 4 -->
+      <section>
+        <h2>
+          <span class="section-num">04</span>
+          Local Storage
+        </h2>
+        <p>
+          Breathe. may store your session preferences and progress locally on your device
+          (e.g., chosen breathing patterns, session history) to provide a consistent experience.
+          This data never leaves your device and is not accessible to the developer or any third party.
+        </p>
+        <p>
+          You can remove this data at any time by uninstalling the application.
+        </p>
+      </section>
+
+      <!-- 5 -->
+      <section>
+        <h2>
+          <span class="section-num">05</span>
+          Children's Privacy
+        </h2>
+        <p>
+          Breathe. is rated for ages 3 and up. Because the application does not collect any personal data,
+          it is safe for use by children. No information is gathered from users of any age.
+        </p>
+      </section>
+
+      <!-- 6 -->
+      <section>
+        <h2>
+          <span class="section-num">06</span>
+          Security
+        </h2>
+        <p>
+          Since no personal data is collected or transmitted by Breathe., there is no risk of
+          your personal information being compromised through the use of this application.
+          Your data stays where it belongs — on your device.
+        </p>
+      </section>
+
+      <!-- 7 -->
+      <section>
+        <h2>
+          <span class="section-num">07</span>
+          Changes to This Policy
+        </h2>
+        <p>
+          This Privacy Policy may be updated if the application's features or data practices change.
+          Any updates will be reflected on this page with a revised date.
+          We encourage you to review this policy periodically.
+        </p>
+        <p>
+          Continued use of the application after changes are posted constitutes your acceptance
+          of the updated policy.
+        </p>
+      </section>
+
+      <!-- 8 — Contact -->
+      <section>
+        <div class="contact-block">
+          <h2>
+            <span class="section-num" style="      color: rgba(196,185,224,0.6);">08</span>
+            Contact
+          </h2>
+          <p>
+            If you have any questions or concerns about this Privacy Policy, please reach out:
+          </p>
+          <div class="contact-detail">
+            <span>Developer</span>
+            <p>Corentin Bruneau</p>
+          </div>
+          <div class="contact-detail">
+            <span>Email</span>
+            <p><a href="mailto:zenflow-mobile@proton.me">zenflow-mobile@proton.me</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer>
+      &copy; 2026 Breathe. &mdash; Corentin Bruneau &mdash; All rights reserved
+    </footer>
+
+  </body>
+</html>
