@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Oh Hi Launcher</title>
+    <meta name="description" content="Privacy Policy of Oh Hi Launcher, a minimal, ad-free Android home screen by CoBru.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      /* Oh Hi is text only, white or black over the wallpaper; its icon sits on #1A1E1D */
+      :root {
+        --ink: #1a1e1d;
+        --text: #3a403e;
+        --muted: #737a78;
+        --accent: #1a1e1d;
+        --accent-soft: rgba(26, 30, 29, 0.06);
+        --border: rgba(26, 30, 29, 0.12);
+        --bg: #f4f5f4;
+        --surface: #ffffff;
+        --inverse-bg: #1a1e1d;
+        --inverse-text: rgba(255, 255, 255, 0.8);
+        --inverse-strong: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) {
+          --ink: #ffffff;
+          --text: rgba(255, 255, 255, 0.8);
+          --muted: rgba(255, 255, 255, 0.5);
+          --accent: #ffffff;
+          --accent-soft: rgba(255, 255, 255, 0.06);
+          --border: rgba(255, 255, 255, 0.12);
+          --bg: #1a1e1d;
+          --surface: #202523;
+          --inverse-bg: #f4f5f4;
+          --inverse-text: rgba(26, 30, 29, 0.8);
+          --inverse-strong: #1a1e1d;
+        }
+      }
+
+      :root[data-theme="dark"] {
+        --ink: #ffffff;
+        --text: rgba(255, 255, 255, 0.8);
+        --muted: rgba(255, 255, 255, 0.5);
+        --accent: #ffffff;
+        --accent-soft: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.12);
+        --bg: #1a1e1d;
+        --surface: #202523;
+        --inverse-bg: #f4f5f4;
+        --inverse-text: rgba(26, 30, 29, 0.8);
+        --inverse-strong: #1a1e1d;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', -apple-system, 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      a {
+        color: var(--ink);
+        text-underline-offset: 3px;
+      }
+
+      strong {
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      /* Header */
+      header {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 24px 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--ink);
+        letter-spacing: -0.2px;
+      }
+
+      .logo span {
+        color: var(--muted);
+        font-weight: 300;
+      }
+
+      .updated {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 400;
+      }
+
+      /* Hero: a home screen, text only */
+      .hero {
+        background: var(--surface);
+        padding: 72px 32px 64px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .hero .clock {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 7vw, 64px);
+        line-height: 1.05;
+        letter-spacing: -2px;
+        font-weight: 300;
+        color: var(--ink);
+        margin-bottom: 20px;
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .hero p {
+        color: var(--muted);
+        max-width: 480px;
+        font-size: 15px;
+      }
+
+      /* TOC */
+      .toc-wrap {
+        max-width: 760px;
+        margin: 48px auto 0;
+        padding: 0 32px;
+      }
+
+      .toc {
+        background: var(--accent-soft);
+        border-radius: 12px;
+        padding: 28px 32px;
+      }
+
+      .toc h2 {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      .toc ol {
+        list-style: none;
+        padding-left: 0;
+        columns: 2;
+        column-gap: 32px;
+        margin-bottom: 0;
+      }
+
+      .toc ol li {
+        margin-bottom: 6px;
+        font-size: 16px;
+        break-inside: avoid;
+      }
+
+      .toc ol li a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 400;
+      }
+
+      .toc ol li a:hover {
+        opacity: 0.6;
+      }
+
+      /* Main content */
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 32px 96px;
+      }
+
+      section {
+        margin-bottom: 56px;
+        padding-bottom: 56px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .section-number {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: -0.6px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: var(--ink);
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin-bottom: 16px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      /* Highlight box */
+      .highlight {
+        background: var(--accent-soft);
+        border-left: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+        margin: 20px 0;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      /* Data table */
+      .table-wrap {
+        overflow-x: auto;
+        margin: 20px 0;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      .data-table th {
+        background: var(--inverse-bg);
+        color: var(--inverse-strong);
+        padding: 10px 16px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .data-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table tr:nth-child(even) td {
+        background: var(--accent-soft);
+      }
+
+      code {
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+        font-size: 12px;
+        color: var(--muted);
+        word-break: break-all;
+      }
+
+      /* Contact */
+      .contact-box {
+        background: var(--inverse-bg);
+        color: var(--inverse-text);
+        border-radius: 12px;
+        padding: 32px;
+        margin-top: 20px;
+      }
+
+      .contact-box p {
+        color: var(--inverse-text);
+        margin-bottom: 12px;
+      }
+
+      .contact-box strong,
+      .contact-box a {
+        color: var(--inverse-strong);
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 32px;
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+        background: var(--surface);
+      }
+
+      @media (max-width: 600px) {
+        .header-inner,
+        .hero,
+        .toc-wrap,
+        main {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .header-inner {
+          flex-direction: column;
+          gap: 4px;
+          text-align: center;
+        }
+        .toc {
+          padding: 24px;
+        }
+        .toc ol {
+          columns: 1;
+        }
+        h2 {
+          font-size: 24px;
+        }
+        .data-table th,
+        .data-table td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">Oh Hi <span>Launcher</span></div>
+        <div class="updated">Last updated: November 16, 2026</div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="clock">Minimal AF · Ad-free</div>
+        <h1>Oh hi.<br>Here's our <em>privacy policy</em>.</h1>
+        <p>Short version: Oh Hi Launcher has no internet access, no ads, no analytics and no accounts. Everything it knows stays on your phone.</p>
+      </div>
+    </div>
+
+    <div class="toc-wrap">
+      <nav class="toc" aria-label="Contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#s1">Who we are</a></li>
+          <li><a href="#s2">What we collect</a></li>
+          <li><a href="#s3">Data kept on your device</a></li>
+          <li><a href="#s4">Permissions</a></li>
+          <li><a href="#s5">Accessibility service</a></li>
+          <li><a href="#s6">Other apps and services</a></li>
+          <li><a href="#s7">Backups</a></li>
+          <li><a href="#s8">Deleting your data</a></li>
+          <li><a href="#s9">Your rights</a></li>
+          <li><a href="#s10">Children</a></li>
+          <li><a href="#s11">Changes</a></li>
+          <li><a href="#s12">Contact</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <main>
+
+      <section id="s1">
+        <div class="section-number">01</div>
+        <h2>Who we are</h2>
+        <p>Oh Hi Launcher (package <code>com.cobr.ohhilauncher</code>) is a minimal, text-only home screen for Android, developed by <strong>CoBru</strong>, an independent developer based in Marseille, France. In this policy, "we", "us" and "our" mean CoBru.</p>
+        <p>Oh Hi Launcher is a fork of <a href="https://github.com/tanujnotes/Olauncher" target="_blank" rel="noopener">Olauncher</a> by tanujnotes and is distributed under the GNU GPLv3 licence. This policy covers Oh Hi Launcher only; it does not cover the original Olauncher app.</p>
+        <p>For the purposes of the EU General Data Protection Regulation (GDPR), CoBru is responsible for this app.</p>
+      </section>
+
+      <section id="s2">
+        <div class="section-number">02</div>
+        <h2>What we collect</h2>
+        <div class="highlight">
+          <strong>Nothing.</strong> Oh Hi Launcher does not request the Internet permission, so it cannot send any data anywhere. It contains no ads, no analytics, no crash reporting, no tracking SDKs and no account system.
+        </div>
+        <p>We never receive your app list, your settings, your screen time or any other information about you or your device. The only way we learn anything about you is if you choose to write to us (see <a href="#s12">Contact</a>).</p>
+        <p>If you email us, we receive your email address and whatever you put in your message. We use it only to reply to you, and we delete the conversation once it is resolved, unless we need to keep it to meet a legal obligation.</p>
+      </section>
+
+      <section id="s3">
+        <div class="section-number">03</div>
+        <h2>Data kept on your device</h2>
+        <p>To work as a launcher, the app stores a few things locally in its own private storage on your phone. Other apps cannot read them, and they never leave your device except through Android's own backup (see <a href="#s7">Backups</a>).</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>What</th>
+                <th>Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Your installed apps</strong></td>
+                <td>Read from Android each time the drawer opens, to list and launch them. The list itself is not saved.</td>
+              </tr>
+              <tr>
+                <td><strong>Home screen setup</strong></td>
+                <td>The apps you place on the home screen, renamed and hidden apps, gesture shortcuts and pinned shortcuts.</td>
+              </tr>
+              <tr>
+                <td><strong>Preferences</strong></td>
+                <td>Theme, text size, alignment, clock and date options and similar settings.</td>
+              </tr>
+              <tr>
+                <td><strong>Screen time</strong></td>
+                <td>Only if you turn it on: today's total is computed on the device from Android's usage statistics and shown on your home screen. It is not stored or shared.</td>
+              </tr>
+              <tr>
+                <td><strong>App state</strong></td>
+                <td>Small counters such as when the app was first opened, used to decide when to show a tip or a one-time prompt.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="s4">
+        <div class="section-number">04</div>
+        <h2>Permissions</h2>
+        <p>Each permission below is used only for the feature described, and only on your device.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Used for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>See all installed apps</strong><br><code>QUERY_ALL_PACKAGES</code></td>
+                <td>Listing your apps in the drawer and on the home screen, which is the core job of a launcher.</td>
+              </tr>
+              <tr>
+                <td><strong>Usage access</strong><br><code>PACKAGE_USAGE_STATS</code></td>
+                <td>The optional screen time counter. You grant it yourself in Android settings and can revoke it at any time.</td>
+              </tr>
+              <tr>
+                <td><strong>Request app removal</strong><br><code>REQUEST_DELETE_PACKAGES</code></td>
+                <td>Opening Android's uninstall dialog when you choose to uninstall an app from the drawer. Android always asks you to confirm.</td>
+              </tr>
+              <tr>
+                <td><strong>Private Space</strong><br><code>ACCESS_HIDDEN_PROFILES</code></td>
+                <td>Showing, locking and unlocking your Private Space apps on Android 15 and later.</td>
+              </tr>
+              <tr>
+                <td><strong>Expand status bar</strong><br><code>EXPAND_STATUS_BAR</code></td>
+                <td>Pulling down the notification shade when you swipe down on the home screen.</td>
+              </tr>
+              <tr>
+                <td><strong>Set alarm</strong><br><code>SET_ALARM</code></td>
+                <td>Opening your clock app when you tap the time. The app never creates or changes alarms.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="s5">
+        <div class="section-number">05</div>
+        <h2>Accessibility service</h2>
+        <p>Oh Hi Launcher includes an optional accessibility service that powers <strong>double tap to lock</strong>. It is off by default and only runs if you enable it yourself in Android's accessibility settings.</p>
+        <ul>
+          <li>It listens only to taps inside Oh Hi Launcher itself; it is restricted to the app's own package and cannot see other apps.</li>
+          <li>Its only action is to lock the screen when you double tap an empty area of the home screen.</li>
+          <li>It does not read, collect, store or share anything you type or see on screen.</li>
+        </ul>
+        <p>You can turn it off at any time in <strong>Settings → Accessibility</strong> on your phone; double tap to lock then stops working and nothing else changes.</p>
+      </section>
+
+      <section id="s6">
+        <div class="section-number">06</div>
+        <h2>Other apps and services</h2>
+        <p>Some actions hand you over to another app. When that happens, that app's own privacy policy applies, not this one.</p>
+        <ul>
+          <li><strong>Web search</strong>: when you search the web from the drawer, your query is opened in your browser on DuckDuckGo. Oh Hi Launcher does not keep the query.</li>
+          <li><strong>Rate and share</strong>: these open the Google Play Store or Android's share sheet.</li>
+          <li><strong>System apps</strong>: gestures and shortcuts can open your clock, calendar, phone, camera or Android settings.</li>
+        </ul>
+        <p>We have no partners and we do not sell, rent or share any data, because we do not have any.</p>
+      </section>
+
+      <section id="s7">
+        <div class="section-number">07</div>
+        <h2>Backups</h2>
+        <p>Oh Hi Launcher allows Android's built-in backup. If backup is turned on for your Google account, Android may save the app's settings (home screen setup and preferences) to your Google account and restore them on a new phone. This is done by Google under your control and is covered by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>; we never have access to it.</p>
+        <p>You can turn this off in your phone's backup settings.</p>
+      </section>
+
+      <section id="s8">
+        <div class="section-number">08</div>
+        <h2>Deleting your data</h2>
+        <p>All the app's data lives on your phone. To erase it, open <strong>Settings → Apps → Oh Hi Launcher → Storage</strong> and tap <strong>Clear storage</strong>, or simply uninstall the app. Settings stored in an Android backup are managed from your Google account.</p>
+      </section>
+
+      <section id="s9">
+        <div class="section-number">09</div>
+        <h2>Your rights</h2>
+        <p>Under the GDPR and other privacy laws, you have the right to access, correct, delete or move personal data about you, to object to or restrict its processing, and to withdraw consent. Since we hold no personal data from the app, these rights mostly concern emails you send us; write to us and we will answer within one month.</p>
+        <p>If you think your data has been mishandled, you can lodge a complaint with the French data protection authority, the <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>, or with the authority in your own country.</p>
+      </section>
+
+      <section id="s10">
+        <div class="section-number">10</div>
+        <h2>Children</h2>
+        <p>Oh Hi Launcher is a general-purpose app and is not directed at children. Because it collects no personal data, it collects none from children either.</p>
+      </section>
+
+      <section id="s11">
+        <div class="section-number">11</div>
+        <h2>Changes</h2>
+        <p>If the app changes in a way that affects your privacy, for example if a future version ever needed internet access, we will update this page and the "Last updated" date before that version is released.</p>
+      </section>
+
+      <section id="s12">
+        <div class="section-number">12</div>
+        <h2>Contact</h2>
+        <p>For any question about this policy or your data:</p>
+        <div class="contact-box">
+          <p><strong>CoBru</strong></p>
+          <p>Marseille, France</p>
+          <p>Email: <a href="mailto:support-cobr@pm.me">support-cobr@pm.me</a></p>
+          <p style="margin-bottom: 0; font-size: 13px;">We aim to reply within a few days, and always within one month.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 CoBru · Oh Hi Launcher</p>
+    </footer>
+
+  </body>
+</html>

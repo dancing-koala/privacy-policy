@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Privacy Policy — Lens Launcher</title>
+    <meta name="description" content="Privacy Policy of Lens Launcher, a honeycomb home screen for Android by CoBru.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      /* Lens is white over a dimmed wallpaper: black scrims and panels, white at 80% for secondary text */
+      :root {
+        --bg: #000000;
+        --panel: #0d0d0d;
+        --ink: #ffffff;
+        --text: rgba(255, 255, 255, 0.8);
+        --muted: rgba(255, 255, 255, 0.5);
+        --faint: rgba(255, 255, 255, 0.1);
+        --border: rgba(255, 255, 255, 0.12);
+        --placeholder: rgba(255, 255, 255, 0.2);
+        --destructive: #e5534b;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Inter', -apple-system, 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      a {
+        color: var(--ink);
+        text-underline-offset: 3px;
+      }
+
+      strong {
+        color: var(--ink);
+        font-weight: 500;
+      }
+
+      h1, h2, .logo {
+        font-family: 'Outfit', sans-serif;
+      }
+
+      /* Header */
+      header {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .header-inner {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--ink);
+      }
+
+      .logo svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      .updated {
+        font-size: 13px;
+        color: var(--muted);
+        font-weight: 400;
+      }
+
+      /* Hero: the honeycomb, dimmer and smaller towards the edges */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 64px 32px 56px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+        background:
+          radial-gradient(ellipse at 30% 20%, rgba(90, 110, 140, 0.35), transparent 60%),
+          radial-gradient(ellipse at 75% 80%, rgba(120, 90, 110, 0.3), transparent 60%),
+          #050505;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+        pointer-events: none;
+      }
+
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .honeycomb {
+        width: 220px;
+        max-width: 60%;
+        height: auto;
+        margin: 0 auto 32px;
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 6vw, 56px);
+        line-height: 1.1;
+        letter-spacing: -1px;
+        font-weight: 400;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .hero p {
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: 15px;
+        color: var(--text);
+      }
+
+      /* TOC */
+      .toc-wrap {
+        max-width: 760px;
+        margin: 48px auto 0;
+        padding: 0 32px;
+      }
+
+      .toc {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 28px 32px;
+      }
+
+      .toc h2 {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      .toc ol {
+        list-style: none;
+        padding-left: 0;
+        columns: 2;
+        column-gap: 32px;
+        margin-bottom: 0;
+      }
+
+      .toc ol li {
+        margin-bottom: 6px;
+        font-size: 15px;
+        break-inside: avoid;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .toc ol li::before {
+        content: "";
+        flex: none;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--muted);
+      }
+
+      .toc ol li a {
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 400;
+      }
+
+      .toc ol li a:hover {
+        color: var(--muted);
+      }
+
+      /* Main content */
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 32px 96px;
+      }
+
+      section {
+        margin-bottom: 56px;
+        padding-bottom: 56px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .section-number {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--faint);
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--ink);
+        margin-bottom: 14px;
+      }
+
+      h2 {
+        font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: -0.4px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: var(--ink);
+      }
+
+      h3 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--ink);
+        margin: 28px 0 12px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        padding-left: 20px;
+        margin-bottom: 16px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      li::marker {
+        color: var(--muted);
+      }
+
+      /* Highlight box */
+      .highlight {
+        background: var(--faint);
+        border-radius: 16px;
+        padding: 18px 22px;
+        margin: 20px 0;
+        font-size: 15px;
+        color: var(--ink);
+      }
+
+      /* Data table */
+      .table-wrap {
+        overflow-x: auto;
+        margin: 20px 0;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      .data-table th {
+        background: var(--faint);
+        color: var(--ink);
+        padding: 12px 16px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .data-table td {
+        padding: 12px 16px;
+        border-top: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      code {
+        font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+        font-size: 12px;
+        color: var(--muted);
+        word-break: break-all;
+      }
+
+      .never {
+        color: var(--destructive);
+        font-weight: 500;
+      }
+
+      /* Contact */
+      .contact-box {
+        background: var(--ink);
+        color: rgba(0, 0, 0, 0.8);
+        border-radius: 20px;
+        padding: 32px;
+        margin-top: 20px;
+      }
+
+      .contact-box p {
+        color: rgba(0, 0, 0, 0.8);
+        margin-bottom: 12px;
+      }
+
+      .contact-box strong,
+      .contact-box a {
+        color: #000000;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 32px;
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 600px) {
+        .header-inner,
+        .hero,
+        .toc-wrap,
+        main {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .header-inner {
+          flex-direction: column;
+          gap: 4px;
+          text-align: center;
+        }
+        .toc {
+          padding: 24px;
+        }
+        .toc ol {
+          columns: 1;
+        }
+        h2 {
+          font-size: 24px;
+        }
+        .data-table th,
+        .data-table td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-inner">
+        <div class="logo">
+          <svg viewBox="22 22 64 64" aria-hidden="true">
+            <circle cx="54" cy="54" r="9" fill="#fff"/>
+            <g fill="#fff" fill-opacity="0.7">
+              <circle cx="54" cy="34" r="6"/><circle cx="54" cy="74" r="6"/>
+              <circle cx="37" cy="44" r="6"/><circle cx="71" cy="44" r="6"/>
+              <circle cx="37" cy="64" r="6"/><circle cx="71" cy="64" r="6"/>
+            </g>
+          </svg>
+          Lens Launcher
+        </div>
+        <div class="updated">Last updated: November 16, 2026</div>
+      </div>
+    </header>
+
+    <div class="hero">
+      <svg class="honeycomb" viewBox="0 0 220 200" aria-hidden="true">
+        <defs>
+          <filter id="soft"><feGaussianBlur stdDeviation="1.6"/></filter>
+        </defs>
+        <!-- Outer ring: small, dim, blurred -->
+        <g fill="#fff" fill-opacity="0.25" filter="url(#soft)">
+          <circle cx="110" cy="18" r="10"/><circle cx="110" cy="182" r="10"/>
+          <circle cx="30" cy="54" r="10"/><circle cx="190" cy="54" r="10"/>
+          <circle cx="30" cy="146" r="10"/><circle cx="190" cy="146" r="10"/>
+          <circle cx="70" cy="30" r="10"/><circle cx="150" cy="30" r="10"/>
+          <circle cx="70" cy="170" r="10"/><circle cx="150" cy="170" r="10"/>
+          <circle cx="22" cy="100" r="10"/><circle cx="198" cy="100" r="10"/>
+        </g>
+        <!-- Middle ring -->
+        <g fill="#fff" fill-opacity="0.6">
+          <circle cx="110" cy="54" r="16"/><circle cx="110" cy="146" r="16"/>
+          <circle cx="70" cy="77" r="16"/><circle cx="150" cy="77" r="16"/>
+          <circle cx="70" cy="123" r="16"/><circle cx="150" cy="123" r="16"/>
+        </g>
+        <!-- Centre, under the lens -->
+        <circle cx="110" cy="100" r="24" fill="#fff"/>
+      </svg>
+      <h1>Your apps, <em>your business</em>.</h1>
+      <p>Lens Launcher has no ads, no analytics and no accounts. Your apps and settings stay on your phone. The only thing that ever leaves it is an anonymous report when the app crashes.</p>
+    </div>
+
+    <div class="toc-wrap">
+      <nav class="toc" aria-label="Contents">
+        <h2>Contents</h2>
+        <ol>
+          <li><a href="#s1">Who we are</a></li>
+          <li><a href="#s2">In short</a></li>
+          <li><a href="#s3">Data kept on your device</a></li>
+          <li><a href="#s4">Crash reports</a></li>
+          <li><a href="#s5">Permissions</a></li>
+          <li><a href="#s6">Web search and other apps</a></li>
+          <li><a href="#s7">Backups</a></li>
+          <li><a href="#s8">Deleting your data</a></li>
+          <li><a href="#s9">Your rights</a></li>
+          <li><a href="#s10">Children</a></li>
+          <li><a href="#s11">Changes</a></li>
+          <li><a href="#s12">Contact</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <main>
+
+      <section id="s1">
+        <div class="section-number">01</div>
+        <h2>Who we are</h2>
+        <p>Lens Launcher (package <code>com.cobr.lenslauncher</code>) is an Android home screen that shows your apps as round icons in a honeycomb. It is developed by <strong>CoBru</strong>, an independent developer based in Marseille, France. In this policy, "we", "us" and "our" mean CoBru.</p>
+        <p>For the purposes of the EU General Data Protection Regulation (GDPR), CoBru is the data controller for the limited data described below.</p>
+      </section>
+
+      <section id="s2">
+        <div class="section-number">02</div>
+        <h2>In short</h2>
+        <ul>
+          <li>No ads, no analytics, no tracking, no account.</li>
+          <li>Your app list, home screen layout, searches and settings stay on your phone.</li>
+          <li>When the app crashes or hits an error, an anonymous technical report is sent to our crash reporting service, Sentry, so we can fix it.</li>
+          <li>We <span class="never">never</span> sell, rent or share your data for advertising.</li>
+        </ul>
+      </section>
+
+      <section id="s3">
+        <div class="section-number">03</div>
+        <h2>Data kept on your device</h2>
+        <p>To work as a launcher, the app keeps a few things in its own private storage on your phone. Other apps cannot read them, and we never receive them.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>What</th>
+                <th>Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Your installed apps</strong></td>
+                <td>Read from Android to draw the honeycomb, search and launch apps, and show their shortcuts. The list itself is not saved.</td>
+              </tr>
+              <tr>
+                <td><strong>Home screen setup</strong></td>
+                <td>Hidden apps, pinned shortcuts and how your Private Space is shown.</td>
+              </tr>
+              <tr>
+                <td><strong>Preferences</strong></td>
+                <td>Your web search engine, "open single match" and similar settings.</td>
+              </tr>
+              <tr>
+                <td><strong>Search text</strong></td>
+                <td>Kept only in memory while you type, to filter your apps. It is never saved or sent.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="s4">
+        <div class="section-number">04</div>
+        <h2>Crash reports</h2>
+        <p>Lens Launcher uses <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a>, a crash reporting service by Functional Software, Inc., to tell us when the app crashes, freezes or hits an unexpected error. This is the only reason the app uses the Internet.</p>
+
+        <h3>What a report contains</h3>
+        <ul>
+          <li>The technical details of the error: error type and message, and where in the code it happened.</li>
+          <li>Device and app information: phone manufacturer and model, Android version, screen size, language, available memory and storage, app version.</li>
+          <li>A short trail of recent app events before the error, such as a screen opening or the app going to the background.</li>
+          <li>A random identifier created when the app is installed, which lets us tell whether many errors come from one phone or many. It is not linked to your name, your Google account or your phone's advertising ID.</li>
+          <li>App session information (when a session starts and ends, and whether it crashed), used to measure how stable each version is.</li>
+        </ul>
+
+        <div class="highlight">
+          Reports do <strong>not</strong> include your name, email, contacts, location, photos, your list of apps or what you search for. An error message may occasionally mention the technical name of an app involved in the error (for example, an app that failed to open).
+        </div>
+
+        <h3>Where and how long</h3>
+        <p>Reports are sent over an encrypted connection to Sentry's data centre in the European Union (Germany). Your IP address is used to deliver the report but is not stored with it. Reports are deleted automatically after at most 90 days.</p>
+
+        <h3>Why</h3>
+        <p>We rely on our <strong>legitimate interest</strong> in keeping the app working and fixing bugs (GDPR Art. 6(1)(f)). The data is kept to the minimum needed for that and is never used for anything else. You can object at any time by contacting us; uninstalling the app also stops all reports.</p>
+      </section>
+
+      <section id="s5">
+        <div class="section-number">05</div>
+        <h2>Permissions</h2>
+        <p>Each permission below is used only for the feature described.</p>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Used for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>See all installed apps</strong><br><code>QUERY_ALL_PACKAGES</code></td>
+                <td>Showing all your apps in the honeycomb, which is the core job of a launcher.</td>
+              </tr>
+              <tr>
+                <td><strong>Request app removal</strong><br><code>REQUEST_DELETE_PACKAGES</code></td>
+                <td>Opening Android's uninstall dialog when you choose Uninstall on an app. Android always asks you to confirm.</td>
+              </tr>
+              <tr>
+                <td><strong>Private Space</strong><br><code>ACCESS_HIDDEN_PROFILES</code></td>
+                <td>Showing, locking and unlocking your Private Space apps on Android 15 and later.</td>
+              </tr>
+              <tr>
+                <td><strong>Internet</strong><br><code>INTERNET</code></td>
+                <td>Sending crash reports only (see <a href="#s4">Crash reports</a>).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Lens Launcher does not use usage access, accessibility services, location, contacts, the camera or the microphone.</p>
+      </section>
+
+      <section id="s6">
+        <div class="section-number">06</div>
+        <h2>Web search and other apps</h2>
+        <p>Some actions hand you over to another app. When that happens, that app's own privacy policy applies, not this one.</p>
+        <ul>
+          <li><strong>Web search</strong>: when you search the web from Lens, your query is opened in your browser with the engine you picked in settings (Google, Bing, Yandex, Yahoo, DuckDuckGo, Ecosia or Qwant), or handed to your phone's default search app. Lens does not keep the query.</li>
+          <li><strong>Wallpaper</strong>: opens Android's wallpaper picker. Lens never reads or uploads your pictures.</li>
+          <li><strong>App info, uninstall and system settings</strong>: open the matching Android screens.</li>
+        </ul>
+      </section>
+
+      <section id="s7">
+        <div class="section-number">07</div>
+        <h2>Backups</h2>
+        <p>Lens Launcher allows Android's built-in backup. If backup is turned on for your Google account, Android may save the app's settings to your Google account and restore them on a new phone. This is done by Google under your control and is covered by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>; we never have access to it.</p>
+      </section>
+
+      <section id="s8">
+        <div class="section-number">08</div>
+        <h2>Deleting your data</h2>
+        <p>To erase everything stored on your phone, open <strong>Settings → Apps → Lens Launcher → Storage</strong> and tap <strong>Clear storage</strong>, or uninstall the app. Crash reports are deleted automatically within 90 days; to have them deleted sooner, email us. Because reports are anonymous, we may ask for your app version and the approximate date of the crash to find them.</p>
+      </section>
+
+      <section id="s9">
+        <div class="section-number">09</div>
+        <h2>Your rights</h2>
+        <p>Under the GDPR and other privacy laws, you have the right to access, correct, delete or move personal data about you, to object to or restrict its processing, and to withdraw consent. To use any of these rights, write to us and we will answer within one month.</p>
+        <p>If you think your data has been mishandled, you can lodge a complaint with the French data protection authority, the <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>, or with the authority in your own country.</p>
+      </section>
+
+      <section id="s10">
+        <div class="section-number">10</div>
+        <h2>Children</h2>
+        <p>Lens Launcher is a general-purpose app and is not directed at children under 13. We do not knowingly collect personal data from children; crash reports contain no information that identifies the person using the phone.</p>
+      </section>
+
+      <section id="s11">
+        <div class="section-number">11</div>
+        <h2>Changes</h2>
+        <p>If the app changes in a way that affects your privacy, we will update this page and the "Last updated" date before that version is released.</p>
+      </section>
+
+      <section id="s12">
+        <div class="section-number">12</div>
+        <h2>Contact</h2>
+        <p>For any question about this policy or your data:</p>
+        <div class="contact-box">
+          <p><strong>CoBru</strong></p>
+          <p>Marseille, France</p>
+          <p>Email: <a href="mailto:support-cobr@pm.me">support-cobr@pm.me</a></p>
+          <p style="margin-bottom: 0; font-size: 13px;">We aim to reply within a few days, and always within one month.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 CoBru · Lens Launcher</p>
+    </footer>
+
+  </body>
+</html>
