@@ -241,6 +241,13 @@
         color: var(--ink);
       }
 
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--ink);
+        margin: 28px 0 12px;
+      }
+
       p {
         margin-bottom: 16px;
       }
@@ -376,7 +383,7 @@
     <header>
       <div class="header-inner">
         <div class="logo">Oh Hi <span>Launcher</span></div>
-        <div class="updated">Last updated: November 16, 2026</div>
+        <div class="updated">Last updated: November 19, 2026</div>
       </div>
     </header>
 
@@ -384,7 +391,7 @@
       <div class="hero-inner">
         <div class="clock">Minimal AF · Ad-free</div>
         <h1>Oh hi.<br>Here's our <em>privacy policy</em>.</h1>
-        <p>Short version: Oh Hi Launcher has no internet access, no ads, no analytics and no accounts. Everything it knows stays on your phone.</p>
+        <p>Short version: Oh Hi Launcher has no ads, no analytics and no accounts. Your apps and settings stay on your phone. The only thing that ever leaves it is a technical report when the app crashes.</p>
       </div>
     </div>
 
@@ -393,17 +400,18 @@
         <h2>Contents</h2>
         <ol>
           <li><a href="#s1">Who we are</a></li>
-          <li><a href="#s2">What we collect</a></li>
+          <li><a href="#s2">In short</a></li>
           <li><a href="#s3">Data kept on your device</a></li>
-          <li><a href="#s4">Permissions</a></li>
-          <li><a href="#s5">Accessibility service</a></li>
-          <li><a href="#s6">Other apps and services</a></li>
-          <li><a href="#s7">Backups</a></li>
-          <li><a href="#s8">Deleting your data</a></li>
-          <li><a href="#s9">Your rights</a></li>
-          <li><a href="#s10">Children</a></li>
-          <li><a href="#s11">Changes</a></li>
-          <li><a href="#s12">Contact</a></li>
+          <li><a href="#s4">Crash reports</a></li>
+          <li><a href="#s5">Permissions</a></li>
+          <li><a href="#s6">Accessibility service</a></li>
+          <li><a href="#s7">Other apps and services</a></li>
+          <li><a href="#s8">Backups</a></li>
+          <li><a href="#s9">Deleting your data</a></li>
+          <li><a href="#s10">Your rights</a></li>
+          <li><a href="#s11">Children</a></li>
+          <li><a href="#s12">Changes</a></li>
+          <li><a href="#s13">Contact</a></li>
         </ol>
       </nav>
     </div>
@@ -413,25 +421,27 @@
       <section id="s1">
         <div class="section-number">01</div>
         <h2>Who we are</h2>
-        <p>Oh Hi Launcher (package <code>com.cobr.ohhilauncher</code>) is a minimal, text-only home screen for Android, developed by <strong>CoBru</strong>, an independent developer based in Marseille, France. In this policy, "we", "us" and "our" mean CoBru.</p>
+        <p>Oh Hi Launcher (package <code>com.cobr.ohhilauncher</code>) is a minimal, text-only home screen for Android, developed by <strong>CoBru</strong>, an independent developer. In this policy, "we", "us" and "our" mean CoBru.</p>
         <p>Oh Hi Launcher is a fork of <a href="https://github.com/tanujnotes/Olauncher" target="_blank" rel="noopener">Olauncher</a> by tanujnotes and is distributed under the GNU GPLv3 licence. This policy covers Oh Hi Launcher only; it does not cover the original Olauncher app.</p>
-        <p>For the purposes of the EU General Data Protection Regulation (GDPR), CoBru is responsible for this app.</p>
+        <p>For the purposes of the EU General Data Protection Regulation (GDPR), CoBru is the data controller for the limited data described below.</p>
       </section>
 
       <section id="s2">
         <div class="section-number">02</div>
-        <h2>What we collect</h2>
-        <div class="highlight">
-          <strong>Nothing.</strong> Oh Hi Launcher does not request the Internet permission, so it cannot send any data anywhere. It contains no ads, no analytics, no crash reporting, no tracking SDKs and no account system.
-        </div>
-        <p>We never receive your app list, your settings, your screen time or any other information about you or your device. The only way we learn anything about you is if you choose to write to us (see <a href="#s12">Contact</a>).</p>
+        <h2>In short</h2>
+        <ul>
+          <li>No ads, no analytics, no tracking, no account.</li>
+          <li>Your app list, home screen, searches and settings stay on your phone.</li>
+          <li>When the app crashes or hits an error, a technical report is sent to our crash reporting service, Sentry, so we can fix it. It does not identify you.</li>
+          <li>We never sell, rent or share your data for advertising.</li>
+        </ul>
         <p>If you email us, we receive your email address and whatever you put in your message. We use it only to reply to you, and we delete the conversation once it is resolved, unless we need to keep it to meet a legal obligation.</p>
       </section>
 
       <section id="s3">
         <div class="section-number">03</div>
         <h2>Data kept on your device</h2>
-        <p>To work as a launcher, the app stores a few things locally in its own private storage on your phone. Other apps cannot read them, and they never leave your device except through Android's own backup (see <a href="#s7">Backups</a>).</p>
+        <p>To work as a launcher, the app stores a few things locally in its own private storage on your phone. Other apps cannot read them, and we never receive them. They leave your device only through Android's own backup (see <a href="#s8">Backups</a>).</p>
 
         <div class="table-wrap">
           <table class="data-table">
@@ -444,23 +454,23 @@
             <tbody>
               <tr>
                 <td><strong>Your installed apps</strong></td>
-                <td>Read from Android each time the drawer opens, to list and launch them. The list itself is not saved.</td>
+                <td>Read from Android to list, search and launch them. The list itself is not saved.</td>
               </tr>
               <tr>
                 <td><strong>Home screen setup</strong></td>
-                <td>The apps you place on the home screen, renamed and hidden apps, gesture shortcuts and pinned shortcuts.</td>
+                <td>The apps you add to the home screen, renamed and hidden apps, the apps your swipes open, the clock and calendar apps you chose, and pinned shortcuts.</td>
               </tr>
               <tr>
                 <td><strong>Preferences</strong></td>
-                <td>Theme, text size, alignment, clock and date options and similar settings.</td>
-              </tr>
-              <tr>
-                <td><strong>Screen time</strong></td>
-                <td>Only if you turn it on: today's total is computed on the device from Android's usage statistics and shown on your home screen. It is not stored or shared.</td>
+                <td>Theme, text size, bold font, alignment, date and time, status bar and similar settings.</td>
               </tr>
               <tr>
                 <td><strong>App state</strong></td>
-                <td>Small counters such as when the app was first opened, used to decide when to show a tip or a one-time prompt.</td>
+                <td>Whether the welcome message and the first-run tips have been seen, and similar flags.</td>
+              </tr>
+              <tr>
+                <td><strong>Search text</strong></td>
+                <td>Kept only in memory while you type, to filter your apps. It is never saved or sent.</td>
               </tr>
             </tbody>
           </table>
@@ -469,8 +479,33 @@
 
       <section id="s4">
         <div class="section-number">04</div>
+        <h2>Crash reports</h2>
+        <p>Oh Hi Launcher uses <a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a>, a crash reporting service by Functional Software, Inc., to tell us when the app crashes, freezes or hits an unexpected error. This is the only reason the app uses the Internet.</p>
+
+        <h3>What a report contains</h3>
+        <ul>
+          <li>The technical details of the error: error type and message, and where in the code it happened.</li>
+          <li>Device and app information: phone manufacturer and model, Android version, screen size, language, available memory and storage, app version.</li>
+          <li>A short trail of technical events before the error, such as which of the app's controls was tapped. It never includes what you type.</li>
+          <li>A random identifier created when the app is installed, which lets us tell whether many errors come from one phone or many. It is not linked to your name, your Google account or your phone's advertising ID.</li>
+          <li>App session information (when a session starts and ends, and whether it crashed), used to measure how stable each version is.</li>
+        </ul>
+
+        <div class="highlight">
+          Reports do <strong>not</strong> include your name, email, contacts, location, photos, your list of apps or what you search for. An error message may occasionally mention the technical name of an app involved in the error (for example, an app that failed to open).
+        </div>
+
+        <h3>Where and how long</h3>
+        <p>Reports are sent over an encrypted connection to Sentry's data centre in the European Union (Germany). Your IP address is used to deliver the report but is not stored with it. Reports are deleted automatically after at most 90 days.</p>
+
+        <h3>Why</h3>
+        <p>We rely on our <strong>legitimate interest</strong> in keeping the app working and fixing bugs (GDPR Art. 6(1)(f)). The data is kept to the minimum needed for that and is never used for anything else. You can object at any time by contacting us; uninstalling the app also stops all reports.</p>
+      </section>
+
+      <section id="s5">
+        <div class="section-number">05</div>
         <h2>Permissions</h2>
-        <p>Each permission below is used only for the feature described, and only on your device.</p>
+        <p>Each permission below is used only for the feature described.</p>
 
         <div class="table-wrap">
           <table class="data-table">
@@ -483,15 +518,11 @@
             <tbody>
               <tr>
                 <td><strong>See all installed apps</strong><br><code>QUERY_ALL_PACKAGES</code></td>
-                <td>Listing your apps in the drawer and on the home screen, which is the core job of a launcher.</td>
-              </tr>
-              <tr>
-                <td><strong>Usage access</strong><br><code>PACKAGE_USAGE_STATS</code></td>
-                <td>The optional screen time counter. You grant it yourself in Android settings and can revoke it at any time.</td>
+                <td>Listing your apps in the app list and on the home screen, which is the core job of a launcher.</td>
               </tr>
               <tr>
                 <td><strong>Request app removal</strong><br><code>REQUEST_DELETE_PACKAGES</code></td>
-                <td>Opening Android's uninstall dialog when you choose to uninstall an app from the drawer. Android always asks you to confirm.</td>
+                <td>Opening Android's uninstall dialog when you choose Uninstall on an app. Android always asks you to confirm.</td>
               </tr>
               <tr>
                 <td><strong>Private Space</strong><br><code>ACCESS_HIDDEN_PROFILES</code></td>
@@ -505,74 +536,78 @@
                 <td><strong>Set alarm</strong><br><code>SET_ALARM</code></td>
                 <td>Opening your clock app when you tap the time. The app never creates or changes alarms.</td>
               </tr>
+              <tr>
+                <td><strong>Internet</strong><br><code>INTERNET</code></td>
+                <td>Sending crash reports only (see <a href="#s4">Crash reports</a>).</td>
+              </tr>
             </tbody>
           </table>
         </div>
-      </section>
-
-      <section id="s5">
-        <div class="section-number">05</div>
-        <h2>Accessibility service</h2>
-        <p>Oh Hi Launcher includes an optional accessibility service that powers <strong>double tap to lock</strong>. It is off by default and only runs if you enable it yourself in Android's accessibility settings.</p>
-        <ul>
-          <li>It listens only to taps inside Oh Hi Launcher itself; it is restricted to the app's own package and cannot see other apps.</li>
-          <li>Its only action is to lock the screen when you double tap an empty area of the home screen.</li>
-          <li>It does not read, collect, store or share anything you type or see on screen.</li>
-        </ul>
-        <p>You can turn it off at any time in <strong>Settings → Accessibility</strong> on your phone; double tap to lock then stops working and nothing else changes.</p>
+        <p>Oh Hi Launcher does not use usage access, location, contacts, the camera or the microphone.</p>
       </section>
 
       <section id="s6">
         <div class="section-number">06</div>
-        <h2>Other apps and services</h2>
-        <p>Some actions hand you over to another app. When that happens, that app's own privacy policy applies, not this one.</p>
+        <h2>Accessibility service</h2>
+        <p>Oh Hi Launcher includes an optional accessibility service that powers <strong>double tap to lock</strong>. It is off by default and only runs if you accept the explanation shown in the app and then enable it yourself in Android's accessibility settings.</p>
         <ul>
-          <li><strong>Web search</strong>: when you search the web from the drawer, your query is opened in your browser on DuckDuckGo. Oh Hi Launcher does not keep the query.</li>
-          <li><strong>Rate and share</strong>: these open the Google Play Store or Android's share sheet.</li>
-          <li><strong>System apps</strong>: gestures and shortcuts can open your clock, calendar, phone, camera or Android settings.</li>
+          <li>It listens only to taps inside Oh Hi Launcher itself; it is restricted to the app's own package and cannot see other apps.</li>
+          <li>Its only action is to lock the screen when you double tap an empty area of the home screen.</li>
+          <li>It does not read, collect, store or share anything you type or see on screen. If the service itself crashed, the crash report described above would be sent, with the same content and nothing more.</li>
         </ul>
-        <p>We have no partners and we do not sell, rent or share any data, because we do not have any.</p>
+        <p>You can turn it off at any time in <strong>Settings → Accessibility</strong> on your phone; double tap to lock then stops working and nothing else changes.</p>
       </section>
 
       <section id="s7">
         <div class="section-number">07</div>
+        <h2>Other apps and services</h2>
+        <p>Some actions hand you over to another app. When that happens, that app's own privacy policy applies, not this one.</p>
+        <ul>
+          <li><strong>Web search</strong>: when a search in the app list matches no app, you can search the web; your query is handed to your phone's default search app. Oh Hi Launcher does not keep the query.</li>
+          <li><strong>Wallpaper</strong>: opens your phone's wallpaper picker. Oh Hi Launcher never reads or uploads your pictures.</li>
+          <li><strong>App info, uninstall and system settings</strong>: open the matching Android screens.</li>
+          <li><strong>Other apps</strong>: the clock, the date and your swipes open the apps you chose, or your clock and calendar apps.</li>
+        </ul>
+      </section>
+
+      <section id="s8">
+        <div class="section-number">08</div>
         <h2>Backups</h2>
         <p>Oh Hi Launcher allows Android's built-in backup. If backup is turned on for your Google account, Android may save the app's settings (home screen setup and preferences) to your Google account and restore them on a new phone. This is done by Google under your control and is covered by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>; we never have access to it.</p>
         <p>You can turn this off in your phone's backup settings.</p>
       </section>
 
-      <section id="s8">
-        <div class="section-number">08</div>
-        <h2>Deleting your data</h2>
-        <p>All the app's data lives on your phone. To erase it, open <strong>Settings → Apps → Oh Hi Launcher → Storage</strong> and tap <strong>Clear storage</strong>, or simply uninstall the app. Settings stored in an Android backup are managed from your Google account.</p>
-      </section>
-
       <section id="s9">
         <div class="section-number">09</div>
-        <h2>Your rights</h2>
-        <p>Under the GDPR and other privacy laws, you have the right to access, correct, delete or move personal data about you, to object to or restrict its processing, and to withdraw consent. Since we hold no personal data from the app, these rights mostly concern emails you send us; write to us and we will answer within one month.</p>
-        <p>If you think your data has been mishandled, you can lodge a complaint with the French data protection authority, the <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>, or with the authority in your own country.</p>
+        <h2>Deleting your data</h2>
+        <p>To erase everything stored on your phone, open <strong>Settings → Apps → Oh Hi Launcher → Storage</strong> and tap <strong>Clear storage</strong>, or uninstall the app. Settings stored in an Android backup are managed from your Google account. Crash reports are deleted automatically within 90 days; to have them deleted sooner, email us. Because reports don't identify you, we may ask for your app version and the approximate date of the crash to find them.</p>
       </section>
 
       <section id="s10">
         <div class="section-number">10</div>
-        <h2>Children</h2>
-        <p>Oh Hi Launcher is a general-purpose app and is not directed at children. Because it collects no personal data, it collects none from children either.</p>
+        <h2>Your rights</h2>
+        <p>Under the GDPR and other privacy laws, you have the right to access, correct, delete or move personal data about you, to object to or restrict its processing, and to withdraw consent. To use any of these rights, write to us and we will answer within one month.</p>
+        <p>If you think your data has been mishandled, you can lodge a complaint with the data protection authority of the country where you live.</p>
       </section>
 
       <section id="s11">
         <div class="section-number">11</div>
-        <h2>Changes</h2>
-        <p>If the app changes in a way that affects your privacy, for example if a future version ever needed internet access, we will update this page and the "Last updated" date before that version is released.</p>
+        <h2>Children</h2>
+        <p>Oh Hi Launcher is a general-purpose app and is not directed at children under 13. We do not knowingly collect personal data from children; crash reports contain no information that identifies the person using the phone.</p>
       </section>
 
       <section id="s12">
         <div class="section-number">12</div>
+        <h2>Changes</h2>
+        <p>If the app changes in a way that affects your privacy, we will update this page and the "Last updated" date before that version is released.</p>
+      </section>
+
+      <section id="s13">
+        <div class="section-number">13</div>
         <h2>Contact</h2>
         <p>For any question about this policy or your data:</p>
         <div class="contact-box">
           <p><strong>CoBru</strong></p>
-          <p>Marseille, France</p>
           <p>Email: <a href="mailto:support-cobr@pm.me">support-cobr@pm.me</a></p>
           <p style="margin-bottom: 0; font-size: 13px;">We aim to reply within a few days, and always within one month.</p>
         </div>
